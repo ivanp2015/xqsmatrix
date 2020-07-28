@@ -1,7 +1,7 @@
 # Makefile for the matrix test program
 
-TARGET:=mtest
-SRC:=mtest.cpp
+TARGET:=test
+SRC:=test.cpp
 OBJ:=$(SRC:.cpp=.o)
 DEP:=$(OBJ:.o=.d)
 
@@ -15,7 +15,7 @@ ifeq ($(DEBUG),1)
 CXXFLAGS+=-O0 -g3 -DDEBUG -D_DEBUG
 LDFLAGS+=-g3
 else
-CXXFLAGS+=-O2
+CXXFLAGS+=-O3
 endif
 
 all: $(TARGET)
